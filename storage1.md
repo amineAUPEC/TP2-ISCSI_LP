@@ -2,18 +2,18 @@
 # storage1 :
 ## install
 
-- VM 2gb RAM,, 64 bits, freenas version, 2 VIRTUALBOX DISK
-- boot from iso
+- VM 2GB RAM, 64 bits, Freenas version, 2 VirtualDISK for VIRTUALBOX 
+- boot from ISO
 - install it
 - remove ISO
 - reboot
 - wait for IP and all things
-- gui from the IP
+- GUI from the IP
 
 
 
 ## activer le service 
-- from gui :
+- from GUI :
 - services
 - start ISCSI
 
@@ -69,12 +69,12 @@ sudo iscsiadm -m node -l -T dddddd.xxxx.Xxx:lun0 -p $serveur
 ## formater en ext4
     sudo mkfs.ext4 /dev/sdb1
 
-## Formatez (en ext4)* cette partition primaire
+## Formatez (en ext4) cette partition primaire
 
     sudo mkdir /mnt/lun0
 
 
-## montez-la* dans le répertoire 
+## montez-la dans le répertoire 
     sudo mount /dev/sdb1 /mnt/lun0
 
 ## Vérifiez que vous pouvez créer et lire des fichiers dans ce dossier. 
