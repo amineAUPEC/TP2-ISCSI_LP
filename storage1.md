@@ -18,21 +18,6 @@
 - start ISCSI
 
 
-
-## exporter le disque
-- sharing -> block(ISCSI)  
-- Portals -> add -> with default settings  
-- Targets -> target: lun0 ; groupid: 1   
--  Extents -> ADD :  
-    - extent_name: ext1
-    - extent_type: device
-    - device : ada1
--  Associated Targets -> ADD :  
-    - target:lun0
-    - lun_id:0
-    - extent:ext1
-
-
 ## exporter le disque 
 ```yml
 - sharing -> block(ISCSI)  
@@ -134,3 +119,18 @@ sudo iscsiadm -m node -l -T dddddd.xxxx.Xxx:lun0 -p $serveur
 
 
 ![display](../) -->
+
+
+<!-- ## exporter le disque
+- sharing -> block(ISCSI)  
+- Portals -> add -> with default settings  
+- Targets -> target: lun0 ; groupid: 1   
+-  Extents -> ADD :  
+    - extent_name: ext1
+    - extent_type: device
+    - device : ada1
+-  Associated Targets -> ADD :  
+    - target:lun0
+    - lun_id:0
+    - extent:ext1
+ -->
